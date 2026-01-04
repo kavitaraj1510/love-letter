@@ -136,6 +136,30 @@ z-index: 10;
 
   setInterval(createHeart, 900);
 </script>
+<script>
+  // Soft romantic background tone
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const ctx = new AudioContext();
+
+  const oscillator = ctx.createOscillator();
+  const gainNode = ctx.createGain();
+
+  oscillator.type = "sine";        // smooth sound
+  oscillator.frequency.value = 220; // warm tone (A3)
+
+  gainNode.gain.value = 0.015;     // VERY soft volume
+
+  oscillator.connect(gainNode);
+  gainNode.connect(ctx.destination);
+
+  // Start sound after first interaction (browser rule)
+  document.addEventListener("click", () => {
+    if (ctx.state === "suspended") {
+      ctx.resume();
+      oscillator.start();
+    }
+  }, { once: true });
+</script>
 
 </body>
 </html>
