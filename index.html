@@ -113,9 +113,7 @@ z-index: 10;
         <br>
         <strong>I love you</strong> <span class="heart">❤️</span>
       </p>
-<button class="music-btn" onclick="startRomanticTone()">
-  🎵 Play romantic vibe
-</button>
+
 
       <button class="music-btn"
         onclick="window.open('https://open.spotify.com/track/4km0RUkMMFdx8iDuq36o2w?si=F4vW1VlNRTyvsWcHuj2Cbg&t=46','_blank')">
@@ -162,25 +160,6 @@ z-index: 10;
       oscillator.start();
     }
   }, { once: true });
-</script>
-<script>
-  let ctx, oscillator, gainNode;
-
-  function startRomanticTone() {
-    if (!ctx) {
-      ctx = new (window.AudioContext || window.webkitAudioContext)();
-      oscillator = ctx.createOscillator();
-      gainNode = ctx.createGain();
-
-      oscillator.type = "sine";        // smooth romantic tone
-      oscillator.frequency.value = 196; // deep & calm
-      gainNode.gain.value = 0.02;      // soft volume
-
-      oscillator.connect(gainNode);
-      gainNode.connect(ctx.destination);
-      oscillator.start();
-    }
-  }
 </script>
 
 </body>
