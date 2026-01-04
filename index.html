@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>For You ❤️</title>
+
+  <!-- Handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #0f172a;
-      color: white;
+      margin: 0;
+      min-height: 100vh;
+      background: url('https://i.pinimg.com/originals/4c/6d/6e/4c6d6e4a9a7d3c1b4b2f6f8c9c5e7b8a.jpg') center/cover no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      font-family: 'Sacramento', cursive;
     }
+
+    .overlay {
+      background: rgba(255, 248, 240, 0.88);
+      padding: 40px 35px;
+      max-width: 420px;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .letter {
+      color: #2b2b2b;
+      font-size: 22px;
+      line-height: 1.7;
+    }
+
+    .letter h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
     .heart {
-      color: red;
-      font-size: 60px;
-      animation: beat 1s infinite;
+      color: #b91c1c;
     }
-    @keyframes beat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+
+    .music-btn {
+      margin-top: 25px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 25px;
+      background: #b91c1c;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .music-btn:hover {
+      background: #991b1b;
     }
   </style>
 </head>
+
 <body>
-  <div>
-    <h1>Happy Birthday ❤️</h1>
-    <p>This is my way of saying</p>
-    <h2 class="heart">I LOVE YOU</h2>
-    <p>
-      You made a website for me,<br>
-      so this is my little version for you.
-    </p>
+  <div class="overlay">
+    <div class="letter">
+      <h1>To my love <span class="heart">❤️</span></h1>
+
+      <p>
+        Happy Birthday.
+        <br><br>
+        I wish you a successful and happy year ahead.
+        I know there is a smile on your face while reading this,
+        so keep smiling — because I love your smile.
+        <br><br>
+        Your smile adds warmth to my heart, and I want to see that
+        smile on your face always.
+        I feel there is a power in your smile —
+        it made me smile even when I was crying.
+        <br><br>
+        There are so many reasons why I love you,
+        and this is one of them.
+        You are very special to me.
+      </p>
+
+      <p>
+        My irreplaceable,
+        <br>
+        <strong>I love you</strong> <span class="heart">❤️</span>
+      </p>
+
+      <button class="music-btn"
+        onclick="window.open('https://open.spotify.com/track/4km0RUkMMFdx8iDuq36o2w?si=F4vW1VlNRTyvsWcHuj2Cbg&t=46','_blank')">
+        ▶ Play our song
+      </button>
+    </div>
   </div>
 </body>
 </html>
